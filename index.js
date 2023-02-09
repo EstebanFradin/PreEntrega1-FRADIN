@@ -49,6 +49,7 @@ while (opciones !== 4) {
                 const resultado = listaDeProductos.find((el) => el.prenda == (eleccion))
                 carrito.push(resultado)
                 console.log(carrito)
+                sumarTotal()
             } else {
                 alert("Elija un producto que este disponible..")
             }
@@ -83,6 +84,12 @@ function mostrarTodosLosObjetos() {
         mensajeProductos += `${index + 1}- ${el.prenda} ${el.precio}$\n`;
     })
     alert(mensajeProductos)
+}
+
+//Función que suma todos los elementos del carritos (precio)
+function sumarTotal(){
+    const total = carrito.reduce((acumulador,elemento)=>acumulador += elemento.precio,0)
+    console.log(`El total a pagar es de: ${total}$`)
 }
 
 
