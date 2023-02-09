@@ -11,24 +11,19 @@ class Producto {
         this.prenda = prenda;
         this.precio = precio;
     }
-
+   
 }
 
 // Esta variable contiene un array con algunos productos base.
-let listaDeProductos = [new Producto("Remera Nike".toUpperCase(), 5000), new Producto("Pantalon Adidas".toUpperCase(), 3500), new Producto("Zapatillas AirForce".toUpperCase(), 15000)]
+let listaDeProductos = [new Producto("Remera".toUpperCase(), 5000), new Producto("Pantalon".toUpperCase(), 3500), new Producto("Zapatillas".toUpperCase(), 15000)]
 
 // Bucle que se encarga de verificar que la opción elegida sea distinta a 4.
 while (opciones !== 4) {
-// Este switch contiene las opciones posibles a elegir para que se realice determinada acción.
+    // Este switch contiene las opciones posibles a elegir para que se realice determinada acción.
     switch (opciones) {
         // El case 1 muestra todos los objetos que contiene el array principal
         case 1:
-
-            let mensajeProductos = `Productos:\n `;
-            listaDeProductos.forEach((el, index) => {
-                mensajeProductos += `${index + 1}- ${el.prenda} ${el.precio}$\n`;
-            })
-            alert(mensajeProductos)
+            mostrarTodosLosObjetos()
             break;
 
         // El case 2 es un buscador en donde escribis el producto que buscas y te devuelve el objeto con el nombre y el precio
@@ -44,19 +39,19 @@ while (opciones !== 4) {
 
             break;
 
-            //Añade productos al carrito y luego realiza la suma total
+        //Añade productos al carrito y luego realiza la suma total
         case 3:
 
-            let eleccion = prompt("Ingresar el nombre que le corresponde al producto que desea añadir: ")
-            const resultado = listaDeProductos.filter((el)=> el.prenda == (eleccion.toUpperCase()))
-            
-            if( resultado.length != 0 ){
-                console.log(carrito.push(resultado))
-                console.log(`Carrito: \n ${carrito}\n`)
-            }else {
-                alert("Elija un producto que este disponible..")
-            } 
+            let eleccion = prompt("Ingresar el nombre que le corresponde al producto que desea añadir: ", mostrarTodosLosObjetos()).toUpperCase();
+            const existe = listaDeProductos.some(el => el.prenda == eleccion)
 
+            if (existe) {
+                const resultado = listaDeProductos.find((el) => el.prenda == (eleccion))
+                carrito.push(resultado)
+                console.log(carrito)
+            } else {
+                alert("Elija un producto que este disponible..")
+            }
             break;
 
         case 404: /*Esta opción la cree para que el administrador de la página pudiese añadir nuevos productos con su precio, 
@@ -81,14 +76,14 @@ while (opciones !== 4) {
 }
 
 //Funcion encargada de la suma total del carrito
-function sumarTotal() {
-            let total = 0
-            carrito.forEach((el) => {
-                total = total + 1;
-            })
-            alert(`El total a pagar es de ${total}`)
-        }
 
+function mostrarTodosLosObjetos() {
+    let mensajeProductos = `Productos:\n `;
+    listaDeProductos.forEach((el, index) => {
+        mensajeProductos += `${index + 1}- ${el.prenda} ${el.precio}$\n`;
+    })
+    alert(mensajeProductos)
+}
 
 
 
