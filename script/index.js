@@ -98,7 +98,7 @@ function eliminarCarrito() {
     carrito = [];
     localStorage.removeItem("carritoEnStorage");
     
-    swal("Compra eliminada con éxito", "", "success");
+     swal("Compra eliminada con éxito", "", "success" ,); 
 
     document.getElementById("tabla-carrito").innerHTML = "";
     document.getElementById("acciones-carrito").innerHTML = "";
@@ -208,9 +208,9 @@ const productos = [
     {
         id: 1,
         marca: "Adidas",
-        descripcion: "Pantalon largo de color rojo",
+        descripcion: "Pantalon deportivo largo de color negro",
         precio: 5000,
-        img: "./images/pantalon.jpeg",
+        img: "./images/pantalon.jpg",
     },
     {
         id: 2,
@@ -222,7 +222,7 @@ const productos = [
     {
         id: 3,
         marca: "Lacoste",
-        descripcion: "Chomba pique rayada",
+        descripcion: "Chomba pique negra",
         precio: 11000,
         img: "./images/chomba.jpg",
     },
@@ -235,9 +235,9 @@ const productos = [
     },
     {
         id: 5,
-        marca: "Gucci",
-        descripcion: "Bolso Ophidia",
-        precio: 100000,
+        marca: "Everlast",
+        descripcion: "Mochila Negra",
+        precio: 25000,
         img: "./images/bolso.jpg",
     },
 ];
@@ -245,84 +245,6 @@ const productos = [
 imprimirProductosEnHTML(productos);
 
 let carrito = chequearCarritoEnStorage();
-
-
-
-
-// Bucle que se encarga de verificar que la opción elegida sea distinta a 4.
-/* while (opciones !== 4) {
-    // Este switch contiene las opciones posibles a elegir para que se realice determinada acción.
-    switch (opciones) {
-        // El case 1 muestra todos los objetos que contiene el array principal
-        case 1:
-            mostrarTodosLosObjetos()
-            break;
-
-        // El case 2 es un buscador en donde escribis el producto que buscas y te devuelve el objeto con el nombre y el precio
-        case 2:
-
-            let busqueda = prompt("¿Qué desea buscar?")
-            const resultadoBusqueda = listaDeProductos.filter((el) => el.prenda.includes(busqueda.toUpperCase()))
-            if (resultadoBusqueda.length == 0) {
-                console.log(`No se encontro ningun artículo con los buscado anteriormente (${busqueda})`)
-            } else {
-                console.log(resultadoBusqueda)
-            }
-
-            break;
-
-        //Añade productos al carrito y luego realiza la suma total
-        case 3:
-
-            let eleccion = prompt("Ingresar el nombre que le corresponde al producto que desea añadir: ", mostrarTodosLosObjetos()).toUpperCase();
-            const existe = listaDeProductos.some(el => el.prenda == eleccion)
-
-            if (existe) {
-                const resultado = listaDeProductos.find((el) => el.prenda == (eleccion))
-                carrito.push(resultado)
-                console.log(carrito)
-                sumarTotal()
-            } else {
-                alert("Elija un producto que este disponible..")
-            }
-            break;
-
-        case 404: /*Esta opción la cree para que el administrador de la página pudiese añadir nuevos productos con su precio, 
-        por eso no fue mencionada en las opciones del inicio. Al recargar la página los valores no se guardan (no sabía como hacerlo..)*/
-
-           /*  nombrePrenda = prompt("Nombre de la prenda")
-            precioPrenda = parseFloat(prompt("Precio de la prenda"))
-            const productoCreado = new Producto(nombrePrenda.toUpperCase(), precioPrenda)
-            let agregarItem = listaDeProductos.push(productoCreado)
-            console.log(agregarItem)
-
-            break;
-        default:
-            break;
-    }
-    opciones = parseInt(prompt("Instrucciones: \n 1 -- Ver los productos disponibles \n 2 -- Buscar algun producto \n 3 -- Añadir alguno de los productos al carrito \n 4 -- SALIR"));
-
-    //Condicional si, al momento de elegir el número 4 (SALIR) muestra un pequeño alert con un saludo, ya que el usuario se esta retirando
-    if (opciones == 4) {
-        alert("Nos vemos!!");
-    }
-}  */
-
-//Funcion encargada de la suma total del carrito
-
-/* function mostrarTodosLosObjetos() {
-    let mensajeProductos = `Productos:\n `;
-    listaDeProductos.forEach((el, index) => {
-        mensajeProductos += `${index + 1}- ${el.prenda} ${el.precio}$\n`;
-    })
-    alert(mensajeProductos)
-}
-
-//Función que suma todos los elementos del carritos (precio)
-function sumarTotal(){
-    const total = carrito.reduce((acumulador,elemento)=>acumulador += elemento.precio,0)
-    console.log(`El total a pagar es de: ${total}$`)
-} */
 
 
 

@@ -1,9 +1,74 @@
 header {
-    background-color: whitesmoke;
+    background-color: #1F2023;
 }
 .tittle-header {
     font-family: 'Playfair Display', serif;
-    padding-bottom: 1.5%;
+    padding-bottom: 1%;
     padding-top: 1.5%;
     text-align: center;
+    font-size: 50px;
+    color: whitesmoke;
 }
+
+.line-header {
+    width: 60%;
+    margin: auto;
+    opacity: 1;
+}
+
+.navbar {
+    margin: 0%;
+    padding: 0%;
+}
+
+.navbar-header {
+    background-color: whitesmoke;
+}
+
+.div-header {
+    display: flex;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    padding: 0.5%;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+}
+.nav-link:hover{
+    color: #EABFC1;
+    text-decoration: underline;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+.div-form{
+    padding: 0.5%;
+}
+
+.form-search {
+    display: flex;
+    justify-content: right;
+}
+
+.footer-details{
+    background-color: whitesmoke;
+    font-family:'Playfair Display', serif ;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.tittle-footer{
+    font-size: 22px;
+    font-weight: 400;
+}
+.img-footer{
+    margin: 0.5%;
+}
+
