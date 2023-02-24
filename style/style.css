@@ -1,0 +1,9 @@
+header {
+    background-color: whitesmoke;
+}
+.tittle-header {
+    font-family: 'Playfair Display', serif;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+    text-align: center;
+}
