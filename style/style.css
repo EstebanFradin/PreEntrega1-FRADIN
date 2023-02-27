@@ -111,3 +111,7 @@ section {
     padding-bottom: 10%;
     padding-top: 10%;
 }
+
+.btn {
+    margin: 10px;
+}

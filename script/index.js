@@ -44,6 +44,7 @@ function addToCart(producto, cantidad, precio) {
       
       const removeBtn = document.createElement('button');
       removeBtn.textContent = 'Eliminar';
+      removeBtn.classList.add('btn', 'btn-dark');
       
       removeBtn.addEventListener('click', () => {
         removeItem(index);
@@ -62,7 +63,6 @@ function addToCart(producto, cantidad, precio) {
     totalCell.textContent = total;
   }
 
-  
 
   const productos = [
     { nombre: 'Camisa', precio: 500 },
@@ -79,6 +79,7 @@ function addToCart(producto, cantidad, precio) {
       
       const addBtn = document.createElement('button');
       addBtn.textContent = 'Agregar al carrito';
+      addBtn.classList.add('btn', 'btn-dark');
       
       addBtn.addEventListener('click', () => {
         addToCart(producto.nombre, 1, producto.precio);
