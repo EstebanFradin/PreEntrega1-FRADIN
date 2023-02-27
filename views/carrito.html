@@ -41,29 +41,50 @@
             </div>
         </nav>
     </header>
+
+    <h1>Productos</h1>
+
+    <ul id="productos"></ul>
+
+    <h2>Carrito</h2>
+
+    <table id="cart" style="border:1px solid">
+        <thead>
+            <tr style="border:1px solid">
+                <th style="border:1px solid">Producto</th>
+                <th style="border:1px solid">Cantidad</th>
+                <th style="border:1px solid">Precio unitario</th>
+                <th style="border:1px solid">Total</th>
+            </tr>
+        </thead>
+        <tbody style="border:1px solid">
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" style="border:1px solid">Total:</td>
+                <td id="total">0</td>
+            </tr>
+        </tfoot>
+    </table>
     
 
     <footer class="footer-details">
         <h3 class="tittle-footer">CoderStore</h3>
-        <a href="./index.html"><img class="img-footer" src="../images/logo-coder.png"
-                alt="Logo de CoderHouse" width="4%" height="4%"></a>
+        <a href="./index.html"><img class="img-footer" src="../images/logo-coder.png" alt="Logo de CoderHouse"
+                width="4%" height="4%"></a>
         <p>@2023 por Esteban Fradin</p>
     </footer>
-  
-    
-    <!-- Librerias y etc -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
+
+   
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <!-- Sweet alert -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <!-- Toastify -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/toastify-js/1.11.2/toastify-es.min.js"></script>
     <!-- <script src="./index_eventos.js"></script> -->
-    <script src="./script/index.js"></script>
+    <script src="../script/index.js"></script>
 </body>
 
 </html>

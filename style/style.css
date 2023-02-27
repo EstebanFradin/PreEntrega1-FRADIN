@@ -72,3 +72,42 @@ section {
     margin: 0.5%;
 }
 
+.color-class-agregar-productos {
+    background-color: #1F2023;
+    color: white;
+}
+
+.contact {
+    background-color: #1F2023;
+}
+.contact-form {
+    width: 30%;
+}
+.color-label {
+    color: white;
+    display: flex;
+    padding-left: 20%;
+    font-family:'Playfair Display', serif ;
+}
+.large-form{
+    display: flex;
+    justify-content: center;
+    width: 300%;
+    background-color:#1F2023;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0%;
+}
+.form-center {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.btn-center {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
