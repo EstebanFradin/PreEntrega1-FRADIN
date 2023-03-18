@@ -122,7 +122,7 @@ function imprimirTabla(array) {
   let tabla = document.createElement("div");
 
   tabla.innerHTML = `
-      <table id="tablaCarrito" class="table table-striped">
+      <table id="tabla-carrito" class="table table-striped">
           <thead>         
               <tr>
                   <th>Item</th>
@@ -131,9 +131,7 @@ function imprimirTabla(array) {
                   <th>Total</th>
               </tr>
           </thead>
-
           <tbody id="bodyTabla">
-
           </tbody>
       </table>
   `;
@@ -143,11 +141,12 @@ function imprimirTabla(array) {
   let bodyTabla = document.getElementById("bodyTabla");
 
   for (let produc of array) {
+
       let datos = document.createElement("tr");
       datos.innerHTML = `
               <td>${produc.title}</td>
               <td>${produc.precio}</td>
-              <td>$${alfajor.precioTotal}</td>
+              <td>$${produc.precioTotal}</td>
               <td><button id="eliminar${produc.id}" class="btn btn-dark">Eliminar</button></td>
     `;
 
@@ -165,5 +164,5 @@ function imprimirTabla(array) {
 `;
 }
 
-imprimirProductosEnHTML();
+imprimirProductosEnHTML(); // Pasar array de objetos con los productos
 let carrito = chequearCarritoEnStorage();
