@@ -1,3 +1,4 @@
+/*  ********************************** HEADER **************************************  */
 header {
     background-color: #1F2023;
 }
@@ -43,19 +44,60 @@ header {
     text-decoration: underline;
 }
 
+/*  ********************************** CONTENIDO PRODUCTOS**************************************  */
 section {
     display: flex;
     justify-content: center;
 }
 
-.div-form{
-    padding: 0.5%;
+.title-products {
+    text-align: center;
 }
 
-.form-search {
-    display: flex;
-    justify-content: right;
+#listado {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: auto;
+    grid-gap: 25px;
+    justify-content: center;
 }
+
+.cajas{
+ border: #1F2023 solid 0.5px;
+}
+
+.images-api{
+    height: 200px;
+    width: 200px;
+}
+
+.center-img-api {
+    text-align: center;
+    padding: 2.5%;
+}
+
+.center-text-api{
+    text-align: center;
+}
+
+.center-btn {
+    text-align: center;
+}
+.centrar-boton-bs{
+    display: flex;
+    justify-content: center;
+}
+
+/*  ********************************** CONTENIDO CARRITO **************************************  */
+
+.title-carrito {
+    text-align: center;
+}
+
+
+
+
+/*  **************************************** FOOTER *******************************************  */
 
 .footer-details{
     background-color: whitesmoke;
@@ -64,10 +106,12 @@ section {
     padding-top: 1%;
     padding-bottom: 1%;
 }
+
 .tittle-footer{
     font-size: 22px;
     font-weight: 400;
 }
+
 .img-footer{
     margin: 0.5%;
 }
