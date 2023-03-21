@@ -44,6 +44,10 @@ header {
     text-decoration: underline;
 }
 
+.card {
+    height: 400px;
+}
+
 .footer-details{
     background-color: whitesmoke;
     font-family:'Playfair Display', serif ;
